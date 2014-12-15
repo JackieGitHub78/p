@@ -1,0 +1,177 @@
+<!DOCTYPE html> 
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Sistema de Calculo Integral para el Analisis de Tarifas Electricas</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="css/jquery.mobile-1.4.5.min.css" />
+        <script src="phonegap.js"></script>
+        <script src="js/jquery-1.11.1.min.js"></script>
+        <script src="js/jquery.mobile-1.4.5.min.js"></script>
+    </head>
+    <body>
+        <div data-role="page" id="home">
+            <div data-role="header">
+                <h1>S.C.I.A.T.E.</h1>
+            </div>
+            <div role="main" class="ui-content">
+                
+                
+                
+                
+                
+                <a href="#t1" class="ui-btn ui-shadow">Tarifa-01</a>
+                <a href="#t2" class="ui-btn">Tarifa-02</a>
+                <a href="#t3om" class="ui-btn">Tarifa-03/OM</a>
+                <a href="#thm" class="ui-btn">Tarifa-HM</a>
+                <a href="#tdac" class="ui-btn">Tarifa-DAC</a>
+             
+                
+            </div>
+            <div data-role="footer" data-position="fixed">
+                <span style="font-size: 8pt;">&copy; Todos los derechos Reservados PROSMET</span>
+                <a href="#reg" data-role="button" data-transition="slideup">Nosotros</a>
+            </div>
+        </div>
+        
+        
+        <div data-role="page" id="nosotros">
+            <div data-role="header">
+                <h1>Nosotros</h1>
+                <a href="#" data-role="button" data-rel="back" class="ui-btn ui-icon-delete ui-btn-icon-notext ui-corner-all ui-btn-right">Atrás</a>
+            </div>
+            <div role="main" class="ui-content">
+                <p style="text-align: justify;">Here is an example of a two "page" site built with two jQuery Mobile divs navigated by linking to an id placed on each page wrapper. Note that the ids on the page wrappers are only needed to support the internal page linking, and are optional if each page is a separate HTML document. Here is what two pages look like inside the body element.</p>
+            </div>
+        </div>
+        
+        
+        <div data-role="page" id="t1">
+            <div data-role="header">
+                <h1>Tarifa-01</h1>
+                <a href="#" data-role="button" data-rel="back" class="ui-btn ui-icon-delete ui-btn-icon-notext ui-corner-all ui-btn-right">Atrás</a>
+            </div>
+            <div role="main" class="ui-content">
+                <label for="texto1">Ingrese Watts Consumidos</label>
+                <input type="text" name="text-1" id="watsconsu" value=" ">
+                <label for="texto2">Ingrese Costo Basico</label>
+                <input type="text" name="text-2" id="costob" value=" ">
+                <label for="texto3">Ingrese Costo Intermedio</label>
+                <input type="text" name="text-3" id="costoi" value=" ">
+                <label for="texto4">Ingrese Costo Excedente</label>
+                <input type="text" name="text-4" id="costoe" value=" ">
+                <label for="texto2">Ingrese % D.A.P.</label>
+                <input type="text" name="text-5" id="dap" value=" ">
+                
+                <a href="#pageone" class="ui-btn ui-btn-inline">Calcular</a>
+                <a href="#pageone" class="ui-btn ui-btn-inline">Nuevo</a>
+                
+                
+            </div>
+        </div>
+        <div data-role="page" id="hist">
+            <div data-role="header">
+                <h1>Historial</h1>
+                <a href="#" data-role="button" data-rel="back">Atrás</a>
+            </div>
+            
+            <div role="main" class="ui-content">
+                
+            </div>
+        </div>
+        
+        
+        <div data-role="page" id="t2">
+            <div data-role="header"><h1>Reservar</h1></div>
+            <div role="main" class="ui-content">
+                <ul data-role="listview">
+                    <li data-role="list-divider">Tipo de Habitación</li>
+                    <li><a href="#">Sencilla</a></li>
+                    <li><a href="#">Doble</a></li>
+                    <li><a href="#">Familiar</a></li>
+                </ul>
+            </div>
+            <div data-role="footer" data-position="fixed">
+                <div data-role="navbar">
+                    <ul>
+                        <li><a href="#" class="ui-btn-active">Siguiente</a></li>
+                        <li><a href="#" data-rel="back">Cancelar</a></li>
+                    </ul>
+                </div><!-- /navbar -->
+            </div>
+        </div>
+        
+        <div data-role="page" id="nr2">
+            <div data-role="header"><h1>Reservar</h1></div>
+            <div role="main" class="ui-content">
+                <ul data-role="listview">
+                    <li data-role="list-divider">Datos Extras</li>
+                    <li>
+                        Personas:
+                        <select id="resP">
+                            <option>1</option>
+                            <option>2</option>
+                            <option>3</option>
+                            <option>4</option>
+                            <option>5</option>
+                        </select>
+                    </li>
+                    <li>
+                        Habitaciones:
+                        <select id="resH">
+                            <option>1</option>
+                            <option>2</option>
+                            <option>3</option>
+                            <option>4</option>
+                            <option>5</option>
+                        </select> 
+                    </li>
+                    <li>
+                        Días:
+                        <select id="resD">
+                            <option>1</option>
+                            <option>2</option>
+                            <option>3</option>
+                            <option>4</option>
+                            <option>5</option>
+                        </select>
+                    </li>
+                </ul>
+            </div>
+            <div data-role="footer" data-position="fixed">
+                <div data-role="navbar">
+                    <ul>
+                        <li><a href="#" class="ui-btn-active">Enviar</a></li>
+                        <li><a href="#" data-rel="back">Cancelar</a></li>
+                    </ul>
+                </div><!-- /navbar -->
+            </div>
+        </div>
+        <div data-role="page" id="reg">
+            <div data-role="header"><h1>Registro</h1></div>
+            <div role="main" class="ui-content">
+                <ul data-role="listview">
+                    <li data-role="list-divider">Datos Personales</li>
+                    <li>
+                        <input type="text" id="regNom" placeholder="Nombre">
+                    </li>
+                    <li>
+                        <input type="tel" id="regTel" placeholder="Teléfono">
+                    </li>
+                    <li>
+                        <input type="email" id="regMail" placeholder="Correo Electrónico">
+                    </li>
+                    <li><a href="#" id="regFoto">Tomar Foto</a></li>
+                </ul>
+                <div id="viewPhoto"></div>
+            </div>
+            <div data-role="footer" data-position="fixed">
+                <div data-role="navbar">
+                    <ul>
+                        <li><a href="#" class="ui-btn-active" id="regSend">Registrar</a></li>
+                    </ul>
+                </div><!-- /navbar -->
+            </div>
+        </div>
+    </body>
+</html>
